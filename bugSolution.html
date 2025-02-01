@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById("myDiv").style.display = "none";
+      // Solution: Use setTimeout to re-enable the div after a short delay
+      setTimeout(function() {
+        document.getElementById("myDiv").style.display = "block";
+      }, 100); // 100ms delay. Adjust as needed.
+    }
+  </script>
+</body>
+</html>
